@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>问卷调查</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            height: 100vh; 
+            margin: 0; 
+            background: linear-gradient(to right, #f9c7f4, #bcfff3); 
+            
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            text-align: center;
+        }
+        h2 {
+            margin-top: 30px;
+        }
+        .question {
+            margin-bottom: 15px;
+        }
+        hr {
+            border: 0;
+            border-top: 1px solid #ccc;
+            margin: 20px 0;
+        }
+        button {
+            display: block;
+            margin: auto;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>问卷调查</h1>
+    <p class="subtitle">感谢您参加我的问卷调查！您的回答将对我有很大帮助。</p>
+    
+    <div class="intro">
+        <p>尊敬的参与者：
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您好！本问卷旨在了解短视频对大学生日常生活及学习的影响。您的每一份答案都是对我们研究的宝贵支持。请根据您的实际情况，诚实填写以下问题。所有数据将仅用于学术研究，我们将严格保密您的个人信息。感谢您的参与和支持！
+            
+            </p>
+    </div>
+     <form action="thank_you.html" method="post">
+    <h2>一、个人信息</h2>
+    
+    <div class="question">
+        <label>1. 您的性别：（单选）</label><br>
+        <input type="radio" id="gender_male" name="gender" value="male" required>
+        <label for="gender_male">男</label><br>
+        <input type="radio" id="gender_female" name="gender" value="female">
+        <label for="gender_female">女</label><br>
+        <input type="radio" id="gender_no_answer" name="gender" value="no_answer">
+        <label for="gender_no_answer">选择不回答</label>
+    </div>
+    <hr>
+    
+    <div class="question">
+        <label>2. 您目前的年级：（单选）</label><br>
+        <input type="radio" id="grade_freshman" name="grade" value="大一" required>
+        <label for="grade_freshman">大一</label><br>
+        <input type="radio" id="grade_sophomore" name="grade" value="大二">
+        <label for="grade_sophomore">大二</label><br>
+        <input type="radio" id="grade_junior" name="grade" value="大三">
+        <label for="grade_junior">大三</label><br>
+    </div>
+    <hr>
+    
+    <div class="question">
+        <label>3. 您所在的学院：（单选）</label><br>
+        <input type="radio" id="field_science" name="field" value="电子信息学院" required>
+        <label for="field_science">电子信息学院</label><br>
+        <input type="radio" id="field_humanities" name="field" value="网络通信学院">
+        <label for="field_humanities">网络通信学院</label><br>
+        <input type="radio" id="field_management" name="field" value="人工智能学院">
+        <label for="field_management">人工智能学院</label><br>
+        <input type="radio" id="field_art" name="field" value="智能制造学院">
+        <label for="field_art">智能制造学院</label><br>
+        <input type="radio" id="field_health" name="field" value="智能交通学院">
+        <label for="field_health">智能交通学院</label><br>
+        <input type="radio" id="field_other" name="field" value="数字商务学院">
+        <label for="field_other">数字商务学院</label><br>
+        <input type="radio" id="field_other" name="field" value="数码艺术学院">
+        <label for="field_other">数码艺术学院</label><br>
+        <input type="radio" id="field_other" name="field" value="士官学院">
+        <label for="field_other">士官学院</label><br>
+
+    </div>
+    <hr>
+
+    <h2>二、短视频使用情况</h2>
+
+    <div class="question">
+        <label>4. 您每天花费在观看短视频上的时间大约是多久？（单选）</label><br>
+        <input type="radio" id="time_under_30" name="video_time" value="30分钟以下" required>
+        <label for="time_under_30">30分钟以下</label><br>
+        <input type="radio" id="time_30_to_60" name="video_time" value="30分钟至1小时">
+        <label for="time_30_to_60">30分钟至1小时</label><br>
+        <input type="radio" id="time_1_to_2" name="video_time" value="1至2小时">
+        <label for="time_1_to_2">1至2小时</label><br>
+        <input type="radio" id="time_2_to_3" name="video_time" value="2至3小时">
+        <label for="time_2_to_3">2至3小时</label><br>
+        <input type="radio" id="time_above_3" name="video_time" value="3小时以上">
+        <label for="time_above_3">3小时以上</label>
+    </div>
+    <hr>
+
+    <div class="question">
+        <label>5. 您通常在什么时间段观看短视频？（多选）</label><br>
+        <input type="checkbox" id="time_morning" name="watch_time" value="早晨起床前">
+        <label for="time_morning">早晨起床前</label><br>
+        <input type="checkbox" id="time_morning_break" name="watch_time" value="上午课间休息">
+        <label for="time_morning_break">上午课间休息</label><br>
+        <input type="checkbox" id="time_lunch" name="watch_time" value="午休时间">
+        <label for="time_lunch">午休时间</label><br>
+        <input type="checkbox" id="time_afternoon_break" name="watch_time" value="下午课间休息">
+        <label for="time_afternoon_break">下午课间休息</label><br>
+        <input type="checkbox" id="time_evening" name="watch_time" value="晚上休息前">
+        <label for="time_evening">晚上休息前</label><br>
+        <input type="checkbox" id="time_night" name="watch_time" value="深夜无法入睡时">
+        <label for="time_night">深夜无法入睡时</label>
+    </div>
+    <hr>
+
+    <div class="question">
+        <label>6. 您最常使用的短视频平台是哪一个？（单选）</label><br>
+        <input type="radio" id="platform_douyin" name="video_platform" value="抖音" required>
+        <label for="platform_douyin">抖音</label><br>
+        <input type="radio" id="platform_kuaishou" name="video_platform" value="快手">
+        <label for="platform_kuaishou">快手</label><br>
+        <input type="radio" id="platform_bilibili" name="video_platform" value="Bilibili">
+        <label for="platform_bilibili">Bilibili</label><br>
+        <input type="radio" id="platform_wechat" name="video_platform" value="微信视频号">
+        <label for="platform_wechat">微信视频号</label><br>
+        <input type="radio" id="platform_wechat" name="video_platform" value="小红书">
+        <label for="platform_wechat">小红书</label><br>
+        <input type="radio" id="platform_other" name="video_platform" value="其他">
+        <label for="platform_other">其他（请注明）：</label>
+        <input type="text" id="platform_other_text" name="platform_other">
+    </div>
+    <hr>
+
+    <h2>三、短视频内容偏好</h2>
+
+    <div class="question">
+        <label>7. 您偏好观看哪种类型的短视频内容？（多选）</label><br>
+        <input type="checkbox" id="content_entertainment" name="video_content" value="娱乐搞笑">
+        <label for="content_entertainment">娱乐搞笑</label><br>
+        <input type="checkbox" id="content_education" name="video_content" value="学习教育">
+        <label for="content_education">学习教育</label><br>
+        <input type="checkbox" id="content_technology" name="video_content" value="科技资讯">
+        <label for="content_technology">科技资讯</label><br>
+        <input type="checkbox" id="content_lifestyle" name="video_content" value="生活方式">
+        <label for="content_lifestyle">生活方式</label><br>
+        <input type="checkbox" id="content_food" name="video_content" value="美食制作">
+        <label for="content_food">美食制作</label><br>
+        <input type="checkbox" id="content_fitness" name="video_content" value="运动健身">
+        <label for="content_fitness">运动健身</label><br>
+        <input type="checkbox" id="content_travel" name="video_content" value="旅游探险">
+        <label for="content_travel">旅游探险</label><br>
+        <input type="checkbox" id="content_other" name="video_content" value="其他">
+        <label for="content_other">其他（请注明）：</label>
+        <input type="text" id="content_other_text" name="content_other">
+    </div>
+    <hr>
+
+    <div class="question">
+        <label>8. 您是否会因为观看短视频而影响学习或工作？（单选）</label><br>
+        <input type="radio" id="impact_often" name="impact" value="经常会" required>
+        <label for="impact_often">经常会</label><br>
+        <input type="radio" id="impact_sometimes" name="impact" value="有时会">
+        <label for="impact_sometimes">有时会</label><br>
+        <input type="radio" id="impact_rarely" name="impact" value="很少会">
+        <label for="impact_rarely">很少会</label><br>
+        <input type="radio" id="impact_never" name="impact" value="从不会">
+        <label for="impact_never">从不会</label>
+    </div>
+    <hr>
+
+    <div class="question">
+        <label>9. 您认为短视频对您的生活有何积极影响？（可多选）</label><br>
+        <input type="checkbox" id="positive_relax" name="positive_impact" value="放松减压">
+        <label for="positive_relax">放松减压</label><br>
+        <input type="checkbox" id="positive_information" name="positive_impact" value="获取信息">
+        <label for="positive_information">获取信息</label><br>
+        <input type="checkbox" id="positive_learning" name="positive_impact" value="学习新知识">
+        <label for="positive_learning">学习新知识</label><br>
+        <input type="checkbox" id="positive_creativity" name="positive_impact" value="提高创造力">
+        <label for="positive_creativity">提高创造力</label><br>
+        <input type="checkbox" id="positive_social" name="positive_impact" value="社交互动">
+        <label for="positive_social">社交互动</label><br>
+        <input type="checkbox" id="positive_none" name="positive_impact" value="没有积极影响">
+        <label for="positive_none">没有积极影响</label><br>
+        <input type="checkbox" id="positive_other" name="positive_impact" value="其他">
+        <label for="positive_other">其他（请注明）：</label>
+        <input type="text" id="positive_other_text" name="positive_other">
+    </div>
+    <hr>
+
+    <div class="question">
+        <label>10. 您认为短视频对您的生活有何消极影响？（可多选）</label><br>
+        <input type="checkbox" id="negative_time" name="negative_impact" value="浪费时间">
+        <label for="negative_time">浪费时间</label><br>
+        <input type="checkbox" id="negative_attention" name="negative_impact" value="分散注意力">
+        <label for="negative_attention">分散注意力</label><br>
+        <input type="checkbox" id="negative_sleep" name="negative_impact" value="睡眠质量下降">
+        <label for="negative_sleep">睡眠质量下降</label><br>
+        <input type="checkbox" id="negative_vision" name="negative_impact" value="视力健康受损">
+        <label for="negative_vision">视力健康受损</label><br>
+        <input type="checkbox" id="negative_social" name="negative_impact" value="社交能力减弱">
+        <label for="negative_social">社交能力减弱</label><br>
+        <input type="checkbox" id="negative_none" name="negative_impact" value="没有消极影响">
+        <label for="negative_none">没有消极影响</label><br>
+        <input type="checkbox" id="negative_other" name="negative_impact" value="其他">
+        <label for="negative_other">其他（请注明）：</label>
+        <input type="text" id="negative_other_text" name="negative_other">
+    </div>
+    <hr>
+
+    <h2>四、开放性问题</h2>
+
+    <div class="question">
+        <label>11. 您对于短视频平台有哪些建议或看法？请描述您的想法。（开放题）</label><br>
+        <textarea id="suggestions" name="suggestions" rows="4" required></textarea>
+    </div>
+    <hr>
+
+    <button type="submit">提交</button>
+</div>
+
+</body>
+</html>
